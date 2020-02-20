@@ -10,14 +10,33 @@ body{
 
 header{
     display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 .header-logo{
-    width: 300px;
+    width: 500px;
 }
 
-.box{
-    width: 100px;
-    height: 100px;
-    background-color: #202932;
+.developer{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.developer-text{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.gitlink{
+    color: white;
+    font-size: 20px;
+    transition: color 0.25s ease-in-out, font-size 0.25s ease-in-out;
+}
+
+.gitlink:hover{
+    color: #8743CC;
+    font-size: 30px;
 }
