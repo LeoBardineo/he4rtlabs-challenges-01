@@ -46,3 +46,15 @@ Cuidados a se tomar:
 Commite as alterações feitas e faça um post ou no nosso Discord na sala #he4rtlabs-challenges ou um post no Twitter com a hashtag #He4rtLabsChallenges e iremos divulgar e/ou fazer um review do seu código.
 
 Caso você sinta confortável, deixamos um arquivo chamado REVIEW.MD para você fazer alguns comentários sobre o desafio e o que você achou no geral.
+
+
+
+Console log das 5 variaveis
+
+console.log({
+    "Valor Projeto: ":valorProjeto,
+    "Dias Efetivos: ":diasEfetivos,
+    "Horas Diárias: ":horasDiarias,
+    "Dias de férias: ":diasFerias,
+    "Resultado: ":valorHora
+});
