@@ -194,9 +194,11 @@ header{
 .tab > .at-left > h1{ font-size: 35px; }
 .tab > .at-left > p{ font-size: 20px; font-weight: 300; }
 
-/* --------- Section sobre --------- */
+/* --------- Section calculadora --------- */
 
 .section-calculadora{
+    flex-direction: column;
+    align-items: center;
     margin-top: 200px;
 }
 
@@ -204,9 +206,99 @@ header{
     font-size: 40px;
 }
 
+.section-calculadora > h2{
+    font-weight: lighter;
+    color: rgba(255, 0, 0, 0.808);
+}
+
+.container-inputs{
+    width: 800px;
+    height: 550px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    z-index: 9;
+}
+
+.input-calculadora{
+    background-color: #333E4A;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.input-calculadora > h2{
+    font-weight: normal;
+}
+
+.input-calculadora > input{
+    background: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    border-bottom: 2px solid #8743CC;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.container-svg{
+    width: 1000px;
+    height: 750px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-input{
+    display: block;
+    position: absolute;
+    z-index: 3;
+    width: 150px;
+    height: 150px;
+    fill: #8743CC;
+}
+
+.svg-relogio{
+    top: 20px;
+    left: 20px;
+}
+
+.svg-trabalhando{
+    top: 20px;
+    right: 20px;
+}
+
+.svg-ferias{
+    bottom: 70px;
+    left: 10px;
+}
+
+.svg-dinheiro{
+    bottom: 70px;
+    right: 20px;
+}
+
 /* --------- Footer --------- */
 
 footer{
-    margin-top: 10px;
-    height: 30px;
+    margin-top: 100px;
+    height: 100px;
+    background-color: #333E4A;
 }
