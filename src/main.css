@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
 
-*{ margin: 0 auto; padding: 0; box-sizing: border-box;}
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+html, body{ height: 100%; }
 
 body{
     background-color: #191A1F;
@@ -11,18 +12,21 @@ body{
 header{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
 }
 
 .header-logo{
     width: 500px;
+    margin-top: 20px;
+    margin: 0 auto; 
 }
 
 .developer{
     width: 300px;
+    height: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto; 
 }
 
 .developer-text{
@@ -39,4 +43,127 @@ header{
 .gitlink:hover{
     color: #8743CC;
     font-size: 30px;
+}
+
+.section-intro{
+    width: 90vw;
+    max-width: 1300px;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+}
+
+.svg-calculator > img{
+    width: 640px;
+}
+
+.section-intro{
+    margin-top: 100px;
+}
+
+.intro-text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.intro-text > h1{
+    font-size: 50px;
+    margin-top: 45px;
+}
+
+.intro-text > h2{
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: lighter;
+}
+
+.intro-text > .button-link{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    width: 320px;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 40px;
+    font-weight: bolder;
+    background-color: #8743CC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-text > .sobre-link{
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: white;
+    color: #8743CC;
+    font-size: 30px;
+    font-weight: lighter;
+    margin-top: 15px;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@-webkit-keyframes fadeInToRight {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1;  transform: translateX(0px); } 
+    }
+
+@-moz-keyframes fadeInToRight {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1;  transform: translateX(0px); } 
+}
+
+@-o-keyframes fadeInToRight {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1;  transform: translateX(0px); } 
+}
+
+@keyframes fadeInToRight {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1;  transform: translateX(0px); } 
+}
+
+@-webkit-keyframes fadeInToLeft {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1;  transform: translateX(0px); } 
+    }
+
+@-moz-keyframes fadeInToLeft {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1;  transform: translateX(0px); } 
+}
+
+@-o-keyframes fadeInToLeft {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1;  transform: translateX(0px); } 
+}
+
+@keyframes fadeInToLeft {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1;  transform: translateX(0px); } 
+}
+
+.animation-fade-in-to-right{
+    -webkit-animation: fadeInToRight 0.5s ease-in-out;
+    -moz-animation: fadeInToRight 0.5s ease-in-out;
+    -o-animation: fadeInToRight 0.5s ease-in-out;
+    animation: fadeInToRight 0.5s ease-in-out;
+}
+
+.animation-fade-in-to-left{
+    -webkit-animation: fadeInToLeft 0.5s ease-in-out;
+    -moz-animation: fadeInToLeft 0.5s ease-in-out;
+    -o-animation: fadeInToLeft 0.5s ease-in-out;
+    animation: fadeInToLeft 0.5s ease-in-out;
 }
