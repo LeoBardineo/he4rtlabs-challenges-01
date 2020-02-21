@@ -19,7 +19,12 @@ calculadoraInput.forEach( (elem) => {
 
         valorHora = Math.round(valorHora * 100) / 100;
 
+        if(!isFinite(valorHora)){
+            var mensagem = `Impossível definir`;
+        }else{
+            var mensagem = `R$ ${valorHora} p/ hora`;
+        }
         let calcResult = document.getElementById("calc-result");
-        calcResult.innerHTML = `R$ ${valorHora} p/ hora`;
+        calcResult.innerHTML = mensagem;
     })
 })
