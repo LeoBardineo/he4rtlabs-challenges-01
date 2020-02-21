@@ -301,4 +301,11 @@ footer{
     margin-top: 100px;
     height: 100px;
     background-color: #333E4A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo{
+    width: 300px;
 }
