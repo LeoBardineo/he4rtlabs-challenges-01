@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
 
 *{ margin: 0; padding: 0; box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
 html, body{ height: 100%; }
 
 body{
@@ -8,6 +9,8 @@ body{
     font-family: 'Roboto', sans-serif;
     color: white;
 }
+
+/* --------- Header --------- */
 
 header{
     display: flex;
@@ -31,7 +34,7 @@ header{
 
 .developer-text{
     font-size: 20px;
-    font-weight: lighter;
+    font-weight: 300;
 }
 
 .gitlink{
@@ -45,20 +48,18 @@ header{
     font-size: 30px;
 }
 
-.section-intro{
+/* --------- Sections --------- */
+
+.section-intro, .section-sobre, .section-calculadora{
+    margin: 100px auto 0px;
     width: 90vw;
     max-width: 1300px;
-    margin: 0 auto; 
     display: flex;
     justify-content: center;
 }
 
 .svg-calculator > img{
     width: 640px;
-}
-
-.section-intro{
-    margin-top: 100px;
 }
 
 .intro-text{
@@ -75,7 +76,7 @@ header{
 .intro-text > h2{
     font-size: 30px;
     margin-top: 20px;
-    font-weight: lighter;
+    font-weight: 300;
 }
 
 .intro-text > .button-link{
@@ -106,7 +107,7 @@ header{
     color: white;
     color: #8743CC;
     font-size: 30px;
-    font-weight: lighter;
+    font-weight: 300;
     margin-top: 15px;
     width: 320px;
     display: flex;
@@ -114,56 +115,98 @@ header{
     justify-content: center;
 }
 
-@-webkit-keyframes fadeInToRight {
-    0% { opacity: 0; transform: translateX(-20px); }
-    100% { opacity: 1;  transform: translateX(0px); } 
-    }
+/* --------- Section sobre --------- */
 
-@-moz-keyframes fadeInToRight {
-    0% { opacity: 0; transform: translateX(-20px); }
-    100% { opacity: 1;  transform: translateX(0px); } 
+.section-sobre{
+    margin-top: 200px;
+    flex-direction: column;
+    align-items: center;
 }
 
-@-o-keyframes fadeInToRight {
-    0% { opacity: 0; transform: translateX(-20px); }
-    100% { opacity: 1;  transform: translateX(0px); } 
+.section-sobre > h1{
+    font-size: 40px;
+    margin-bottom: 30px;
 }
 
-@keyframes fadeInToRight {
-    0% { opacity: 0; transform: translateX(-20px); }
-    100% { opacity: 1;  transform: translateX(0px); } 
+.tabs-buttons > button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #283440;
 }
 
-@-webkit-keyframes fadeInToLeft {
-    0% { opacity: 0; transform: translateX(20px); }
-    100% { opacity: 1;  transform: translateX(0px); } 
-    }
-
-@-moz-keyframes fadeInToLeft {
-    0% { opacity: 0; transform: translateX(20px); }
-    100% { opacity: 1;  transform: translateX(0px); } 
+.tabs-buttons > button.active-tab{
+    background-color: #333E4A;
+    font-weight: bolder;
 }
 
-@-o-keyframes fadeInToLeft {
-    0% { opacity: 0; transform: translateX(20px); }
-    100% { opacity: 1;  transform: translateX(0px); } 
+.tabs-content{
+    width: 1100px;
+    height: 500px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #333E4A;
 }
 
-@keyframes fadeInToLeft {
-    0% { opacity: 0; transform: translateX(20px); }
-    100% { opacity: 1;  transform: translateX(0px); } 
+.tabs-content > .tab{
+    width: 100%;
+    height: 100%;
+    display: none;
 }
 
-.animation-fade-in-to-right{
-    -webkit-animation: fadeInToRight 0.5s ease-in-out;
-    -moz-animation: fadeInToRight 0.5s ease-in-out;
-    -o-animation: fadeInToRight 0.5s ease-in-out;
-    animation: fadeInToRight 0.5s ease-in-out;
+.tabs-content > .active-tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.animation-fade-in-to-left{
-    -webkit-animation: fadeInToLeft 0.5s ease-in-out;
-    -moz-animation: fadeInToLeft 0.5s ease-in-out;
-    -o-animation: fadeInToLeft 0.5s ease-in-out;
-    animation: fadeInToLeft 0.5s ease-in-out;
+.tab-svg{
+    width: 400px;
+}
+
+.tab > .align-svg{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab > .at-right{ width: 40%; }
+.tab > .at-left{ width: 40%; }
+
+.tab > .at-left{
+    margin-right: 10px;
+    text-align: right;
+}
+
+.tab > .at-right{ margin-left: 10px; }
+.tab > .at-right > h1{ font-size: 35px; }
+.tab > .at-right > p{ font-size: 20px; font-weight: 300; }
+
+.tab > .at-left{ margin-right: 10px; }
+.tab > .at-left > h1{ font-size: 35px; }
+.tab > .at-left > p{ font-size: 20px; font-weight: 300; }
+
+/* --------- Section sobre --------- */
+
+.section-calculadora{
+    margin-top: 200px;
+}
+
+.section-calculadora > h1{
+    font-size: 40px;
+}
+
+/* --------- Footer --------- */
+
+footer{
+    margin-top: 10px;
+    height: 30px;
 }
